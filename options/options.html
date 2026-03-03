@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Multi-Row Bookmarks Bar Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Multi-Row Bookmarks Bar</h1>
+
+    <div class="setting">
+      <label for="rowCount">Number of rows</label>
+      <div class="control">
+        <input type="range" id="rowCount" min="2" max="4" value="2">
+        <span id="rowCountValue" class="value">2</span>
+      </div>
+    </div>
+
+    <div class="setting">
+      <label for="rowHeight">Row height (px)</label>
+      <div class="control">
+        <input type="range" id="rowHeight" min="24" max="40" value="28">
+        <span id="rowHeightValue" class="value">28</span>
+      </div>
+    </div>
+
+    <div class="setting">
+      <label for="theme">Theme</label>
+      <div class="control">
+        <select id="theme">
+          <option value="system">System (auto)</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="setting">
+      <button id="resetRows">Reset Row Assignments</button>
+      <p class="hint">Clears all manual drag-and-drop assignments. Bookmarks will auto-overflow.</p>
+    </div>
+
+    <div class="setting">
+      <p class="hint">
+        <strong>Tip:</strong> Hide Chrome's native bookmarks bar with
+        <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> for the best experience.
+      </p>
+    </div>
+  </div>
+
+  <script src="../shared/constants.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
